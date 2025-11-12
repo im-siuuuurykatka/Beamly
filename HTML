@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beamly</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Firebase -->
   <script type="module" src="script.js" defer></script>
 </head>
 <body>
   <h1>Beamly 💌</h1>
-  <div>
-    <label>Twoje ID urządzenia:</label>
-    <input type="text" id="senderId" placeholder="np. telefon1">
-  </div>
-  <div>
-    <label>Odbiorca:</label>
-    <input type="text" id="receiverId" placeholder="np. tablet1">
-  </div>
-  <div>
-    <textarea id="message" placeholder="Wpisz wiadomość..."></textarea>
-  </div>
-  <button id="sendBtn">Wyślij</button>
 
-  <h2>Odebrane wiadomości:</h2>
-  <ul id="messagesList"></ul>
+  <div id="loginDiv">
+    <button id="googleSignInBtn">Zaloguj przez Google</button>
+  </div>
+
+  <div id="chatDiv" style="display:none;">
+    <p>Twoje ID: <span id="myId"></span></p>
+    <div>
+      <label>Odbiorca:</label>
+      <input type="text" id="receiverId" placeholder="np. tablet1">
+    </div>
+    <div>
+      <textarea id="message" placeholder="Wpisz wiadomość..."></textarea>
+    </div>
+    <button id="sendBtn">Wyślij</button>
+
+    <h2>Odebrane wiadomości:</h2>
+    <ul id="messagesList"></ul>
+
+    <button id="signOutBtn">Wyloguj</button>
+  </div>
 </body>
 </html>
